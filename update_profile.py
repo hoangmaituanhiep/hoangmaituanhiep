@@ -9,40 +9,39 @@ import os
 import urllib.request
 from datetime import date, datetime, timezone
 
-USER = "DietrichGebert"
-BIRTHDAY = date(1989, 1, 15)
-JOINED_YEAR = 2023  # account creation year, never changes
+USER = "hoangmaituanhiep"
+BIRTHDAY = date(2007, 3, 19)
+JOINED_YEAR = 2022  # account creation year, never changes
 W = 56  # info column width in characters
 
-ART = r"""
-                 ++==---
-            +==---------:-:::
-          +==------::::::..... .
-        *===----:::::...::::..   :#
-       +==-=========++++++++==:.  .#
-      =--=+*#%%######******++++-:  +
-      -=*#%%%%%%#####*******+++=-:.=
-      =*%%@@@@%%%######******+++=-:-
-      +#%%##*+++*###**+----===+++=--#
-      +#%#+===::-+##*=::::::-==++=--=*
-    %#*#%#*+*+-=+#%%*=---:---=++++==+=   #
-    %#*#%%%%%###%%%%*+++++++***+++=-=+##**
-    @#+#%%%%%%%%%%%#*++++***+++++++==*###
-     %###%%%%#####++=-=+++**+++++++++
-      %%########%%#+++++++**++==+++*
-        ##*###**#**++====++*++++++
-         *##%#**##*++++++++*+++==*
-          *###%%%##******+++++===+
-           **##%%%#*****++====-==
-         #+#*+++++=====------==++.
-         ..%##*+=------:---===++=-.
-     #+   :%%%%#*+=----====+++++=-.
- *+    .  :#%%###*++====++++*+++=-
-       .  :+######****++*****+++=
-          :+**#####************=
-           :+***####***##****+:
-             -+*##########+==.
-               .=*#####*=.
+ART = r"""                                                                                    
+                   ---------------                 
+                 --------------------              
+              -------------------------            
+             ---------------------------           
+            -----------------------------          
+            ------------------------------         
+           -------------------------------         
+            -------------------------------        
+            --------------+----------------        
+            ------------++++++--------------       
+            -----------++++++++------------        
+           +++---------++++++++------------        
+            ++---+++--++++++++------------         
+            +++-+++++++-+++++++----------          
+             +++++----------++----------           
+             ++++++++++++++----+++++++-            
+               ++++++++++++-++-+++++++-            
+               ++++++++++++++++-++++++             
+               +++++++++++++++++++++++             
+              +++++++++++++++++++++++              
+            -+++++++++++++++++-+++--               
+          ---+++++++++++++++++++++--               
+        -----+++++++++++++++++++++----             
+         -----+++++++++++++---++++----         
+          ----++++++++++++---+++++-- 
+               +++++++++++++++++++-
+               ++++--++++++---++++
 """
 
 # two tokens by design: the Actions GITHUB_TOKEN yields the contribution-style
@@ -106,10 +105,8 @@ def fetch_stats():
       }}
     }}""", token=PRIV_TOKEN)["user"]
     stats = {
-        "followers": u["followers"]["totalCount"],
         "repos": u["repositories"]["totalCount"],
         "contributed": u["repositoriesContributedTo"]["totalCount"],
-        "stars": sum(n["stargazerCount"] for n in u["repositories"]["nodes"]),
         "commits": commits,
     }
     stats.update(loc([n["name"] for n in u["repositories"]["nodes"] if not n["isFork"]], u["id"]))
@@ -164,9 +161,9 @@ def kv(key, val, width=W):
     return [(f"{key}: ", "k"), (dots + " ", "d"), (str(val), "v")]
 
 
-def kv2(k1, v1, k2, v2):
+def kv2(k1, v1):
     left = kv(k1, v1, 30)
-    return left + [(" | ", "d")] + kv(k2, v2, 23)
+    return left
 
 
 def rule(title=""):
@@ -180,23 +177,23 @@ def info_lines(s):
     return [
         [(f"{USER.lower()}@github ", "h"), ("─" * (W - len(USER) - 8), "d")],
         [],
-        kv("OS", "Windows, macOS"),
+        kv("OS", "Windows, Linux"),
         kv("Uptime", f"{y} years, {m} months, {d} days"),
-        kv("Host", "Trimble"),
-        kv("Kernel", "Lead GenAI Engineer"),
-        kv("IDE", "Claude Code, Cursor, VS Code"),
+        kv("Host", "UET-VNU"),
+        kv("Kernel", "Computer Science Student"),
+        kv("IDE", "VS Code, IntelliJ, Antigravity"),
         [],
-        kv("Languages.Programming", "Python, Java, C#, TypeScript"),
-        kv("Languages.Real", "German, English, Russian"),
-        kv("Hobbies", "Fishing"),
+        kv("Languages.Programming", "Java, Python, C++, TypeScript"),
+        kv("Languages.Communicating", "Vietnamese, English"),
+        kv("Hobbies", "Travelling, Fishing"),
         [],
         rule("Contact"),
-        kv("Email", "dietrichgebert@gmail.com"),
-        kv("LinkedIn", "in/dietrich-gebert-b3a314a9"),
+        kv("Email", "hoangmaituanhiep@gmail.com"),
+        kv("Facebook", "facebook.com/nhon19"),
         [],
         rule("GitHub Stats"),
-        kv2("Repos", f"{s['repos']} {{Contributed: {s['contributed']}}}", "Stars", n(s["stars"])),
-        kv2("Commits", n(s["commits"]), "Followers", n(s["followers"])),
+        kv2("Repos", f"{s['repos']} {{Contributed: {s['contributed']}}}"),
+        kv2("Commits", n(s["commits"])),
         [("Lines of Code: ", "k"), (n(s["loc"]), "v"), (" ( ", "d"),
          (n(s["loc_add"]) + "++", "g"), (", ", "d"), (n(s["loc_del"]) + "--", "r"), (" )", "d")],
     ]
