@@ -30,7 +30,7 @@
 <text x="25" y="445" fill="#57606a" xml:space="preserve">               ++++--++++++---++++</text>
 <text x="390" y="45" xml:space="preserve"><tspan fill="#0969da">hoangmaituanhiep@github </tspan><tspan fill="#afb8c1">────────────────────────────────</tspan></text>
 <text x="390" y="87" xml:space="preserve"><tspan fill="#953800">OS: </tspan><tspan fill="#afb8c1">..................................... </tspan><tspan fill="#24292f">Windows, Linux</tspan></text>
-<text x="390" y="108" xml:space="preserve"><tspan fill="#953800">Uptime: </tspan><tspan fill="#afb8c1">..................... </tspan><tspan fill="#24292f">19 years, 6 months, 1 days</tspan></text>
+<text x="390" y="108" xml:space="preserve"><tspan fill="#953800">Uptime: </tspan><tspan fill="#afb8c1">..................... </tspan><tspan fill="#24292f">19 years, 6 months, 2 days</tspan></text>
 <text x="390" y="129" xml:space="preserve"><tspan fill="#953800">Host: </tspan><tspan fill="#afb8c1">.......................................... </tspan><tspan fill="#24292f">UET-VNU</tspan></text>
 <text x="390" y="150" xml:space="preserve"><tspan fill="#953800">Kernel: </tspan><tspan fill="#afb8c1">....................... </tspan><tspan fill="#24292f">Computer Science Student</tspan></text>
 <text x="390" y="171" xml:space="preserve"><tspan fill="#953800">IDE: </tspan><tspan fill="#afb8c1">.................... </tspan><tspan fill="#24292f">VS Code, IntelliJ, Antigravity</tspan></text>
@@ -42,6 +42,6 @@
 <text x="390" y="339" xml:space="preserve"><tspan fill="#953800">Facebook: </tspan><tspan fill="#afb8c1">.......................... </tspan><tspan fill="#24292f">facebook.com/nhon19</tspan></text>
 <text x="390" y="381" xml:space="preserve"><tspan fill="#0969da">─ GitHub Stats </tspan><tspan fill="#afb8c1">─────────────────────────────────────────</tspan></text>
 <text x="390" y="402" xml:space="preserve"><tspan fill="#953800">Repos: </tspan><tspan fill="#afb8c1">.... </tspan><tspan fill="#24292f">9 {Contributed: 0}</tspan></text>
-<text x="390" y="423" xml:space="preserve"><tspan fill="#953800">Commits: </tspan><tspan fill="#afb8c1">................. </tspan><tspan fill="#24292f">335</tspan></text>
-<text x="390" y="444" xml:space="preserve"><tspan fill="#953800">Lines of Code: </tspan><tspan fill="#24292f">703,904</tspan><tspan fill="#afb8c1"> ( </tspan><tspan fill="#1a7f37">711,149++</tspan><tspan fill="#afb8c1">, </tspan><tspan fill="#cf222e">7,245--</tspan><tspan fill="#afb8c1"> )</tspan></text>
+<text x="390" y="423" xml:space="preserve"><tspan fill="#953800">Commits: </tspan><tspan fill="#afb8c1">................. </tspan><tspan fill="#24292f">336</tspan></text>
+<text x="390" y="444" xml:space="preserve"><tspan fill="#953800">Lines of Code: </tspan><tspan fill="#24292f">700,976</tspan><tspan fill="#afb8c1"> ( </tspan><tspan fill="#1a7f37">711,149++</tspan><tspan fill="#afb8c1">, </tspan><tspan fill="#cf222e">10,173--</tspan><tspan fill="#afb8c1"> )</tspan></text>
 </svg>
